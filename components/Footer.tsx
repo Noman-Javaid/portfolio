@@ -119,9 +119,6 @@ const Footer = () => {
           <p className="text-slate-400">
             © {currentYear} <span className="text-white font-semibold">M Noman Javaid</span>. All rights reserved.
           </p>
-          <p className="text-slate-400 flex items-center gap-2">
-            Crafted with <FaHeart className="text-red-500 animate-pulse" /> using Next.js & Tailwind CSS
-          </p>
         </div>
       </div>
     </footer>
