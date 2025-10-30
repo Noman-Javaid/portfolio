@@ -20,7 +20,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <div className="grid  gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Information - 2 columns */}
           <div className="lg:col-span-2 space-y-6 animate-fade-in-up">
             <div>
@@ -95,7 +95,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form - 3 columns */}
-          <div className="lg:col-span-3 animate-fade-in-down">
+          {/* <div className="lg:col-span-3 animate-fade-in-down">
             <div className="bg-white border border-slate-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-500">
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Send a Message</h3>
               <form className="space-y-5">
@@ -158,7 +158,7 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

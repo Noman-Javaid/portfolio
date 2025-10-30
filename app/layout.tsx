@@ -6,10 +6,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "M Noman Javaid - Full Stack Software Engineer",
-  description: "Portfolio of M Noman Javaid - Software Engineer specializing in Ruby on Rails, React.js, and MERN Stack. Over 2 years of experience in full-stack development.",
+  description: "Portfolio of M Noman Javaid - Software Engineer specializing in Ruby on Rails, React.js, and MERN Stack. Over 3 years of experience in full-stack development.",
   keywords: "Software Engineer, Full Stack Developer, Ruby on Rails, React, MERN, TypeScript, Next.js",
   authors: [{ name: "M Noman Javaid" }],
   creator: "M Noman Javaid",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({

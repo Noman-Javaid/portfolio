@@ -54,7 +54,7 @@ const Education = () => {
                     <div className="text-sm text-slate-600 mt-1 font-medium">Years</div>
                   </div>
                   <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl p-4 text-center border border-primary-100 hover:border-primary-300 hover:shadow-md transition-all duration-300">
-                    <div className="text-3xl font-bold text-gradient-vibrant">BSE</div>
+                    <div className="text-3xl font-bold text-gradient-vibrant">BSSE</div>
                     <div className="text-sm text-slate-600 mt-1 font-medium">Degree</div>
                   </div>
                   <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl p-4 text-center border border-primary-100 hover:border-primary-300 hover:shadow-md transition-all duration-300">
