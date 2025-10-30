@@ -133,7 +133,7 @@ const Hero = () => {
                 <div className="text-sm text-slate-600 mt-1 font-medium">Years Exp.</div>
               </div>
               <div className="bg-white border border-slate-100 rounded-2xl p-5 text-center hover:shadow-lg hover:border-primary-200 transition-all duration-300">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">14</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">20+</div>
                 <div className="text-sm text-slate-600 mt-1 font-medium">Projects</div>
               </div>
               <div className="bg-white border border-slate-100 rounded-2xl p-5 text-center hover:shadow-lg hover:border-primary-200 transition-all duration-300">
