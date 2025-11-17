@@ -2,77 +2,89 @@
 
 import { experience } from "@/data/portfolio";
 import { FaBriefcase, FaCheckCircle, FaCalendar, FaMapMarkerAlt } from "react-icons/fa";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 bg-white section-pattern">
-      <div className="container mx-auto max-w-7xl">
+    <section id="experience" className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-white section-pattern relative overflow-hidden">
+      {/* Minimal Background Elements */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(100,116,139,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(100,116,139,0.03)_1px,transparent_1px)] bg-[size:80px_80px]"></div>
+      </div>
+
+      <div className="container mx-auto max-w-7xl relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
+        <AnimatedSection animation="fade-up" className="text-center mb-12 sm:mb-16">
           <div className="inline-block mb-4">
-            <span className="text-sm font-semibold text-primary-600 uppercase tracking-wider">Experience</span>
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-xs font-bold uppercase tracking-wider">
+              <FaBriefcase className="text-sm" />
+              Experience
+            </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
-            Professional Journey
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
+            Professional <span className="text-slate-600">Journey</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Building innovative solutions and delivering excellence
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Experience Card */}
         <div className="max-w-5xl mx-auto">
-          <div className="relative">
-            {/* Timeline Dot */}
-            <div className="absolute left-0 top-8 w-4 h-4 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full shadow-lg shadow-primary-500/30 hidden lg:block"></div>
-            <div className="absolute left-2 top-16 bottom-0 w-px bg-gradient-to-b from-primary-500 to-accent-500 opacity-30 hidden lg:block"></div>
+          <AnimatedSection animation="fade-up" className="relative">
+            {/* Professional Timeline */}
+            <div className="absolute left-0 top-8 w-1 h-full bg-gradient-to-b from-slate-900 via-slate-600 to-transparent opacity-20 hidden lg:block"></div>
+            <div className="absolute left-0 top-8 w-3 h-3 bg-slate-900 rounded-full hidden lg:block"></div>
 
-            <div className="lg:ml-12 glass-effect rounded-2xl p-8 lg:p-10 hover:shadow-2xl transition-all duration-500 animate-fade-in-up">
+            <div className="lg:ml-12 bg-white border-2 border-slate-200 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 hover:shadow-2xl hover:border-slate-300 transition-all duration-500">
               {/* Company Header */}
-              <div className="flex flex-wrap items-start justify-between gap-6 mb-8">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg">
-                      <FaBriefcase className="text-white text-2xl" />
+              <div className="flex flex-col sm:flex-row items-start justify-between gap-6 mb-8">
+                <div className="space-y-3 flex-1">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 bg-slate-900 rounded-lg flex items-center justify-center shadow-lg flex-shrink-0">
+                      <FaBriefcase className="text-white text-xl" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-slate-900">{experience.company}</h3>
-                      <p className="text-primary-600 font-semibold text-lg">{experience.position}</p>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-slate-900">{experience.company}</h3>
+                      <p className="text-slate-600 font-semibold text-lg sm:text-xl mt-1">{experience.position}</p>
                     </div>
                   </div>
-                  <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 ml-0 sm:ml-18">
                     <div className="flex items-center gap-2">
-                      <FaCalendar className="text-primary-500" />
+                      <FaCalendar className="text-slate-500" />
                       <span className="font-medium">{experience.period}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-primary-500" />
+                      <FaMapMarkerAlt className="text-slate-500" />
                       <span className="font-medium">{experience.location}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-semibold border border-primary-200">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-lg text-sm font-semibold shadow-sm">
                   Currently Working
                 </div>
               </div>
 
               {/* Divider */}
-              <div className="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent mb-8"></div>
+              <div className="h-px bg-slate-200 mb-8"></div>
 
               {/* Responsibilities */}
               <div className="space-y-4">
-                <h4 className="text-xl font-bold text-slate-900 mb-6">Key Responsibilities & Achievements</h4>
+                <h4 className="text-lg sm:text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                  <div className="w-1 h-6 bg-slate-900 rounded-full"></div>
+                  Key Responsibilities & Achievements
+                </h4>
                 <div className="grid gap-3">
                   {experience.responsibilities.map((responsibility, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300 group"
+                      className="flex items-start gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 hover:shadow-sm transition-all duration-300 group"
                     >
-                      <div className="flex-shrink-0 w-6 h-6 bg-primary-100 rounded-full flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform duration-300">
-                        <FaCheckCircle className="text-primary-600 text-sm" />
+                      <div className="flex-shrink-0 w-5 h-5 bg-slate-900 rounded-full flex items-center justify-center mt-0.5">
+                        <FaCheckCircle className="text-white text-xs" />
                       </div>
-                      <p className="text-slate-700 leading-relaxed text-sm lg:text-base">{responsibility}</p>
+                      <p className="text-slate-700 leading-relaxed text-sm sm:text-base">{responsibility}</p>
                     </div>
                   ))}
                 </div>
@@ -80,27 +92,22 @@ const Experience = () => {
 
               {/* Impact Stats */}
               <div className="mt-10 pt-8 border-t border-slate-200">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl lg:text-4xl font-bold text-gradient-vibrant mb-2">20+</div>
-                    <div className="text-sm text-slate-600 font-medium">Projects Delivered</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl lg:text-4xl font-bold text-gradient-vibrant mb-2">5+</div>
-                    <div className="text-sm text-slate-600 font-medium">Technologies</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl lg:text-4xl font-bold text-gradient-vibrant mb-2">100%</div>
-                    <div className="text-sm text-slate-600 font-medium">On-Time</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl lg:text-4xl font-bold text-gradient-vibrant mb-2">3+</div>
-                    <div className="text-sm text-slate-600 font-medium">Years Growth</div>
-                  </div>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                  {[
+                    { value: "20+", label: "Projects Delivered" },
+                    { value: "5+", label: "Technologies" },
+                    { value: "100%", label: "On-Time" },
+                    { value: "3+", label: "Years Growth" }
+                  ].map((stat, index) => (
+                    <div key={index} className="text-center p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-all duration-300">
+                      <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-2">{stat.value}</div>
+                      <div className="text-xs sm:text-sm text-slate-600 font-medium">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

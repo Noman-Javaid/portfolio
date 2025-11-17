@@ -134,8 +134,125 @@
     }
   }
   
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Animated Elements */
+  .animated-element {
+    opacity: 0;
+  }
+  
+  .animated-element.animate-in {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .animated-element.fade-up.animate-in {
+    animation-name: fadeInUp;
+  }
+  
+  .animated-element.fade-down.animate-in {
+    animation-name: slideInDown;
+  }
+  
+  .animated-element.fade-left.animate-in {
+    animation-name: slideInLeft;
+  }
+  
+  .animated-element.fade-right.animate-in {
+    animation-name: slideInRight;
+  }
+  
+  .animated-element.scale.animate-in {
+    animation-name: zoomIn;
+  }
+  
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Stagger animations */
+  .stagger-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .stagger-item:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-item:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-item:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-item:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-item:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-item:nth-child(6) { animation-delay: 0.6s; }
+  
+  /* Floating animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Gradient background animation */
+  .animated-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
   }
   
   /* Mobile-optimized animations */
@@ -149,14 +266,49 @@
   
   /* Touch-friendly interactions */
   @media (hover: none) and (pointer: coarse) {
+    .card-hover:hover {
+      transform: none;
+    }
+    
     .card-hover:active {
       transform: scale(0.98);
+    }
+  }
+  
+  /* Mobile responsive utilities */
+  @media (max-width: 640px) {
+    .mobile-full-width {
+      width: 100vw;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+    
+    .mobile-px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
   
   /* Enhanced focus states for accessibility */
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+  
+  /* Smooth scroll with offset for fixed header */
+  html {
+    scroll-padding-top: 100px;
+  }
+  
+  /* Better text rendering on mobile */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      line-height: 1.3;
+    }
   }
 }
 
