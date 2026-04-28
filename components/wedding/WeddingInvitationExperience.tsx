@@ -74,7 +74,7 @@ export function WeddingInvitationExperience({ walimaOnly = false }: Props) {
   const reduce = useReducedMotion();
 
   return (
-    <main className="relative h-[100dvh] overflow-hidden bg-[#050617] text-white">
+    <main className="relative h-[100dvh] overflow-hidden bg-[#050617] text-white [@media(max-height:740px)]:h-auto [@media(max-height:740px)]:min-h-[100dvh] [@media(max-height:740px)]:overflow-y-auto">
       {!reduce && <WeddingConfetti />}
 
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_-20%,rgba(255,255,255,0.18),transparent),radial-gradient(ellipse_70%_60%_at_10%_20%,rgba(236,72,153,0.28),transparent),radial-gradient(ellipse_70%_55%_at_90%_35%,rgba(59,130,246,0.26),transparent),radial-gradient(ellipse_80%_70%_at_55%_110%,rgba(245,158,11,0.2),transparent)]" />
@@ -90,7 +90,7 @@ export function WeddingInvitationExperience({ walimaOnly = false }: Props) {
 
       <FloatingPetals />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-4xl flex-col px-4 pb-5 pt-5 sm:px-10 sm:pb-10 sm:pt-10">
+      <div className="relative z-10 mx-auto flex h-full max-w-4xl flex-col px-4 pb-5 pt-5 sm:px-10 sm:pb-10 sm:pt-10 [@media(max-height:740px)]:h-auto">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -244,6 +244,16 @@ export function WeddingInvitationExperience({ walimaOnly = false }: Props) {
                     <br />
                     Barkat Market, Lahore
                   </p>
+                  <div className="mt-3 flex justify-center">
+                    <a
+                      href="https://www.google.com/maps?rlz=1C5CHFA_enPK1155PK1156&um=1&ie=UTF-8&fb=1&gl=pk&sa=X&geocode=KSv0Krd2BBk5MfAkiXXfxvEr&daddr=10+-+A+New,+Aibak+Block+Garden+Town,+Lahore"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center rounded-full border border-white/14 bg-white/10 px-4 py-2 text-sm font-semibold text-white/90 shadow-sm transition hover:bg-white/15 active:scale-[0.99]"
+                    >
+                      View location on Maps
+                    </a>
+                  </div>
                 </div>
               </motion.article>
             </motion.section>

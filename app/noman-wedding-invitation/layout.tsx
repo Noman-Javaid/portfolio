@@ -30,7 +30,7 @@ export default function WeddingInvitationLayout({
 }) {
   return (
     <div
-      className={`${cormorant.variable} ${greatVibes.variable} h-[100dvh] overflow-hidden font-[family-name:var(--font-wedding-serif)] antialiased`}
+      className={`${cormorant.variable} ${greatVibes.variable} h-[100dvh] overflow-hidden font-[family-name:var(--font-wedding-serif)] antialiased [@media(max-height:740px)]:h-auto [@media(max-height:740px)]:min-h-[100dvh] [@media(max-height:740px)]:overflow-y-auto`}
     >
       {children}
     </div>
